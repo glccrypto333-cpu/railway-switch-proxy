@@ -7,5 +7,6 @@ set -e
 htpasswd -bc /etc/squid/passwd "$PROXY_USER" "$PROXY_PASS"
 
 mkdir -p /var/spool/squid /var/log/squid
+
 squid -Nz || true
 squid -N -d 1
